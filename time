@@ -1,0 +1,21 @@
+import time
+seconds = time.time()
+print(seconds)
+
+present = time.ctime(0)
+print(present)
+
+print("nhap sex")
+# time.sleep(1)
+print("cummed")
+
+tg = time.localtime()
+print(tg)
+print("nam hien tai la: ", tg.tm_year)
+print("thang  hien tai la: ", tg.tm_mon)
+
+ts = time.strftime("%y/%m/%d, %H:%M:%S ", tg)
+print(ts)
+
+age = int(input("nhap tuoi cua ban: "))
+print("so nam den 100 tuoi: ", (100 - age) + tg.tm_year)
