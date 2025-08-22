@@ -1,0 +1,11 @@
+def roi(revenue, price):
+    print(f"ti le roi la: {(revenue - price) / price}")
+    if (revenue - price) / price >= 0.75: 
+        return "invest!!!!"
+    else:
+        return "eco round sau mua op"
+    
+revenue = float(input("moi nhap doanh thu may da kiem duoc: "))    
+price = float(input("nhap chi phi mua sech: "))
+a = roi(revenue, price)
+print(a)
