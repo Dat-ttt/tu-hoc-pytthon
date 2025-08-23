@@ -9,3 +9,17 @@ revenue = float(input("moi nhap doanh thu may da kiem duoc: "))
 price = float(input("nhap chi phi mua sech: "))
 a = roi(revenue, price)
 print(a)
+
+#bai tap tinh chuoi fibonaci
+def fibonaci(n):
+    if n == 1 or n == 2:
+        return 1
+    else:
+        return fibonaci(n - 1) + fibonaci(n - 2)
+
+while True:
+    n = int(input("Nhap so n: "))
+    if n >= 1:
+        break
+
+print(f"F(n) = {fibonaci(n)}")
