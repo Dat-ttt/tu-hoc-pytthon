@@ -1,0 +1,28 @@
+from random import randrange
+
+row = int(input("nhap so hang: "))
+colunm = int(input("nhap so cot: "))
+arr = []
+
+for i in range(row):
+    onerow = []
+    for j in range(colunm):
+        onerow.append(randrange(0, 101))
+    arr.append(onerow)
+
+print("matrix da nhap:")
+for i in range(row):
+    for j in range(colunm):
+        print(arr[i][j], end = "\t")
+    print()
+
+print("dong bat ky: ", arr[randrange(0, row)])
+
+randrow = randrange(0, colunm)
+print("cot bat ky:")
+for i in range(row):
+    print("\t", arr[i][randrow])
+
+
+maximum = max(max(row) for row in arr)
+print("max = ", maximum)
