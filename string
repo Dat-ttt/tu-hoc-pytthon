@@ -1,0 +1,34 @@
+str1 = "english = 78 science = 83 math = 68 history = 65"
+tach = str1.split()
+#print(tach)
+
+sum = 0
+num = 0
+
+for i in tach:
+    if i.isdigit():
+        sum += int(i)
+        num += 1
+
+print("tong = ", sum)
+print("trung binh = ", sum / num)
+
+matkhau= "euphoria69"
+
+def check(mk):
+    if mk == matkhau:
+        return 1
+    else:
+        return 0
+        
+n = 0
+while n < 5:
+    mk = str(input("nhap mat khau: "))
+    if check(mk) == 1:
+        print("dang nhap thanh cong")
+        break
+    else:
+        print(f"may khau khong hop le {n+1}/5 (it nhat 6 ki tu va 1 chu so)")
+        n += 1
+        if n == 5:
+            print("mat khau sai 5 lan, cut ra ngoai")
