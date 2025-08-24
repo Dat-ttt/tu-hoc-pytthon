@@ -1,0 +1,35 @@
+#bai 1
+from random import randrange  # Import randrange
+
+n = int(input("nhap so phan tu: "))
+lst1 = []
+for i in range(n):
+    lst1.append(randrange(1, 101))  # ngau nhien tu 1 den 100
+
+print(lst1)
+
+#bai 2
+lst2 = input("nhap list 2: ").split()  # Input: 12 34 56
+lst2 = [int(item) for item in lst2]    # Convert each to int
+print("ham da nhap: ", lst2)
+
+lst2a = [item * item for item in lst2]
+print("ham binh phuong:", lst2a)
+
+mark2 = 0
+for item in lst2:
+    if item > 50:
+        mark2 += 1
+print("so phan tu lon hon 50 la: ", mark2)
+
+#bai 3
+quest = ["2 + 5 + 7 =", "5 * 10 =", "12 % 2 =", "5 // 2 ="]
+mark3 = 0
+for i in quest:
+    a = i.strip("=") #xoa dau "="
+    ans = eval(a)
+    rep = int(input(f"{i} "))
+    if rep == ans:
+        print("correct")
+    else:
+        print("the correct answer is: ", ans)
